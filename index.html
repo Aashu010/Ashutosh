@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashutosh Singh | Cybersecurity Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oxanium:wght@400;600;700&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-bg: #0a0a12;
@@ -29,7 +30,7 @@
             background-color: var(--primary-bg);
             color: var(--text-color);
             line-height: 1.6;
-            font-family: 'Oxanium', sans-serif;
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(0, 162, 255, 0.05) 0%, transparent 20%),
@@ -169,6 +170,12 @@
             font-family: 'Share Tech Mono', monospace;
         }
         
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+        }
+        
         .terminal-text {
             font-family: 'Share Tech Mono', monospace;
             color: var(--terminal-text);
@@ -221,6 +228,7 @@
             font-family: 'Share Tech Mono', monospace;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin: 0 10px;
         }
         
         .btn::before {
@@ -242,6 +250,21 @@
             background-color: rgba(0, 255, 76, 0.1);
             transform: translateY(-3px);
             box-shadow: var(--glow);
+        }
+        
+        .btn-primary {
+            background-color: rgba(0, 255, 76, 0.1);
+            border-width: 2px;
+        }
+        
+        .btn-secondary {
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(0, 162, 255, 0.1);
+            box-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--accent-blue);
         }
         
         /* Sections */
@@ -286,6 +309,11 @@
             margin-bottom: 20px;
             color: var(--accent-green);
             font-family: 'Orbitron', sans-serif;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
         }
         
         .education {
@@ -526,6 +554,22 @@
             font-family: 'Share Tech Mono', monospace;
         }
         
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tech-tag {
+            background-color: rgba(0, 255, 76, 0.1);
+            color: var(--accent-green);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
         .project-card ul {
             padding-left: 20px;
             margin-bottom: 20px;
@@ -542,6 +586,29 @@
             color: var(--accent-green);
             position: absolute;
             left: -20px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            transition: transform 0.3s;
+        }
+        
+        .project-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        .project-link i {
+            margin-right: 5px;
         }
         
         /* Certificates Section */
@@ -721,6 +788,16 @@
             .hero h2 {
                 font-size: 1.6rem;
             }
+            
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                margin: 5px 0;
+            }
         }
         
         @media (max-width: 768px) {
@@ -778,11 +855,15 @@
         <div class="container">
             <h1>ASHUTOSH SINGH</h1>
             <h2>CYBERSECURITY SPECIALIST</h2>
+            <p class="hero-subtitle">Securing digital infrastructures through ethical hacking & vulnerability assessment</p>
             <div class="terminal-text">
                 <span id="terminal-output">Initializing system... Scanning for vulnerabilities...</span>
                 <span class="terminal-cursor"></span>
             </div>
-            <a href="#contact" class="btn">GET ACCESS</a>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">GET ACCESS</a>
+                <a href="#projects" class="btn btn-secondary">VIEW MY WORK</a>
+            </div>
         </div>
     </section>
 
@@ -794,20 +875,24 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>PROFESSIONAL SUMMARY</h3>
-                    <p>Cybersecurity enthusiast with strong knowledge of web application security, vulnerability assessment, and secure coding practices. Skilled in identifying and mitigating risks using OWASP Top 10, API security, and threat modeling. Certified in Ethical Hacking and Network Defense with hands-on experience in CTFs, bug bounty programs, and security research.</p>
+                    <h3>MY JOURNEY IN CYBERSECURITY</h3>
+                    <p>My fascination with cybersecurity began when I first learned about ethical hacking and how it could be used to protect rather than harm. What started as curiosity about how systems could be breached evolved into a passion for building robust defenses against digital threats.</p>
+                    
+                    <p>I specialize in identifying vulnerabilities before they can be exploited, combining technical knowledge with creative problem-solving to anticipate potential attack vectors. My approach to security is proactive rather than reactive - I believe in building secure systems from the ground up rather than just patching vulnerabilities.</p>
+                    
+                    <p>When I'm not hunting for bugs or studying new attack techniques, I contribute to open-source security tools and participate in CTF challenges to continuously sharpen my skills. I'm driven by the belief that in our increasingly digital world, cybersecurity is not just a technical challenge but a fundamental requirement for trust and safety online.</p>
                     
                     <div class="education">
                         <h3>EDUCATION</h3>
                         <div class="education-item">
                             <h4>Masters of Computer Application in Cybersecurity</h4>
-                            <p>JECRC University, Jaipur | May 2026</p>
+                            <p>JECRC University, Jaipur, Rajasthan | May 2026</p>
                         </div>
                         <div class="education-item">
                             <h4>Bachelors of Computer Application</h4>
-                            <p>GGTU University, Banswara | May 2024</p>
+                            <p>GGTU University, Banswara, Rajasthan | May 2024</p>
                         </div>
-                    </div>
+                    </div>  
                 </div>
                 <div class="about-image">
                     <i class="fas fa-user-secret hacker-icon"></i>
@@ -860,15 +945,7 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
-                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-people-group"></i> Team collaboration</li>
-                        <li><i class="fas fa-arrows-rotate"></i> Adaptability</li>
-                        <li><i class="fas fa-lightbulb"></i> Problem-solving</li>
-                        <li><i class="fas fa-comments"></i> Effective communication</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -881,7 +958,7 @@
             </div>
             <div class="experience-item">
                 <h3>Research & Development Intern</h3>
-                <span class="company">Seepy Community</span>
+                <span class="company">Secpy Community</span>
                 <ul>
                     <li>Performed risk assessments and vulnerability scanning of information systems, identifying potential security gaps.</li>
                     <li>Researched and documented emerging attack vectors and exploits, aligning findings with industry best practices.</li>
@@ -902,12 +979,67 @@
                     <div class="project-content">
                         <h3>Blood Bank & Donor Management System</h3>
                         <p><strong>Group Project | Role: Cybersecurity Lead</strong></p>
-                        <p><strong>Technologies:</strong> HTML, CSS, PHP, MySQL</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <p>A comprehensive system for managing blood bank operations with a focus on security and data integrity.</p>
                         <ul>
                             <li>Performed vulnerability assessment on the application modules and mitigated threats like SQL Injection, XSS, and weak authentication.</li>
                             <li>Designed and implemented secure access control policies to ensure safe handling of donor and recipient data.</li>
                             <li>Conducted penetration testing simulations and provided remediation guidelines to the development team, improving overall application security.</li>
                         </ul>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Network Vulnerability Scanner</h3>
+                        <p><strong>Personal Project</strong></p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Nmap</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Networking</span>
+                        </div>
+                        <p>A custom vulnerability scanner that identifies security weaknesses in network infrastructures.</p>
+                        <ul>
+                            <li>Developed a Python-based tool that integrates with Nmap for comprehensive network scanning.</li>
+                            <li>Implemented vulnerability detection using known CVE databases and custom security checks.</li>
+                            <li>Created detailed reporting functionality that prioritizes risks based on severity and potential impact.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Secure File Encryption Tool</h3>
+                        <p><strong>Academic Project</strong></p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Cryptography</span>
+                            <span class="tech-tag">AES</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <p>A command-line tool for secure file encryption using advanced cryptographic algorithms.</p>
+                        <ul>
+                            <li>Implemented AES-256 encryption for securing sensitive files with password-based key derivation.</li>
+                            <li>Added integrity verification through HMAC to detect tampering of encrypted files.</li>
+                            <li>Designed a user-friendly interface with progress indicators and detailed operation logs.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -974,7 +1106,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p>aashutosh9928@gmail.com</p>
+                            <p><a href="mailto:aashutosh9928@gmail.com" style="color: var(--text-color); text-decoration: none;">aashutosh9928@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -988,12 +1120,19 @@
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h3>LinkedIn</h3>
-                            <p>linkedin.com/ashutoshsingh35</p>
+                            <p><a href="https://linkedin.com/ashutoshsingh35" target="_blank" style="color: var(--text-color); text-decoration: none;">linkedin.com/ashutoshsingh35</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/aashu010" target="_blank" style="color: var(--text-color); text-decoration: none;">github.com/aashu010</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <input type="text" placeholder="Your Name" required>
                         <input type="email" placeholder="Your Email" required>
                         <input type="text" placeholder="Subject" required>
@@ -1009,10 +1148,10 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-hackerrank"></i></a>
+                <a href="https://linkedin.com/ashutoshsingh35" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/aashu010" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-hackerrank"></i></a>
             </div>
             <p>&copy; 2023 ASHUTOSH SINGH. ALL RIGHTS RESERVED.</p>
         </div>
@@ -1086,6 +1225,31 @@
             
             type();
         }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
         
         // Initialize effects when page loads
         window.onload = function() {
